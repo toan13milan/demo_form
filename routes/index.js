@@ -9,40 +9,19 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/login', function(request, response, next){
-
-    var user_email_address = request.body.user_email_address;
-
-    var user_password = request.body.user_password;
-
-    if(user_email_address && user_password)
+    console.log(request.body);
+    if(request.body.user_name && request.body.user_email)
     {
-        query = `
-        SELECT * FROM form_lead 
-        WHERE user_email = "${user_email_address}"
-        `;
-
+        query = `INSERT INTO form_lead (user_name, user_email, phone_number, car_type, pay_type) VALUES ('${request.body.user_name}', '${request.body.user_email}', '${request.body.phone_number}', '${request.body.car_type}', '${request.body.paytype}')`;
+        
         database.query(query, function(error, data){
-
-            console.log(data);
-            if(data && data.length() > 0)
+            if(data)
             {
-                for(var count = 0; count < data.length(); count++)
-                {
-                    if(data[count].user_password == user_password)
-                    {
-                        request.session.user_id = data[count].user_id;
-
-                        response.redirect("/");
-                    }
-                    else
-                    {
-                        response.send('Incorrect Password');
-                    }
-                }
+                response.redirect("/thanks");
             }
             else
             {
-                response.send('Incorrect Email Address');
+                response.send('Something wrong');
             }
             response.end();
         });

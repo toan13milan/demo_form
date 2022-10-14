@@ -36,52 +36,27 @@
         <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
         <form  method="post" action="/login">
 
-        <p><span class="wpcf7-form-control-wrap" data-name="model"><select name="model" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false"><option value="">- Chọn dòng xe -</option><option value="Nissan Almera">Nissan Almera</option><option value="Nissan Navara">Nissan Navara</option><option value="Nissan Terra">Nissan Terra</option><option value="Nissan X-Trail">Nissan X-Trail</option></select></span></p>
-        <p>Hình thức thanh toán: <span class="wpcf7-form-control-wrap" data-name="thanh-toan"><span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><span class="wpcf7-list-item-label">Trả góp</span><input type="radio" name="thanh-toan" value="Trả góp" checked="checked"></span><span class="wpcf7-list-item last"><span class="wpcf7-list-item-label">Trả hết</span><input type="radio" name="thanh-toan" value="Trả hết"></span></span></span></p>
+        <p><span class="wpcf7-form-control-wrap" data-name="model">
+            <select name="car_type" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+                <option value="">- Chọn dòng xe -</option><option value="Nissan Almera">Nissan Almera</option>
+                <option value="Nissan Navara">Nissan Navara</option><option value="Nissan Terra">Nissan Terra</option>
+                <option value="Nissan X-Trail">Nissan X-Trail</option></select></span></p>
+        <p>Hình thức thanh toán: <span class="wpcf7-form-control-wrap" data-name="thanh-toan">
+            <span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"
+                ><span class="wpcf7-list-item-label">Trả góp</span><input type="radio" name="paytype" value="1" checked="checked"></span>
+                <span class="wpcf7-list-item last"><span class="wpcf7-list-item-label">Trả hết</span>
+                <input type="radio"  name="paytype" value="2" ></span></span></span></p>
         <p><span class="wpcf7-form-control-wrap" data-name="your-name">
-          <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Họ và tên*"></span></p>
+          <input type="text" name="user_name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" placeholder="Họ và tên*"></span></p>
         <p><span class="wpcf7-form-control-wrap" data-name="your-phone">
-          <input type="tel" name="your-phone" value="" size="40" maxlength="11" minlength="10" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Số điện thoại*"></span></p>
+          <input type="tel" name="phone_number" value="" size="40" maxlength="11" minlength="10" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Số điện thoại*"></span></p>
         <p><span class="wpcf7-form-control-wrap" data-name="your-email">
-          <input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email*"></span></p>
+          <input type="email" name="user_email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email*"></span></p>
         <p>
         <input type="submit" value="GỬI YÊU CẦU NGAY" class="wpcf7-form-control has-spinner wpcf7-submit btn btn-danger"><span class="wpcf7-spinner"></span></p>
         </div>
         </div>
 </div>
       </div>
-        <div class="container">
-            <div class="row mt-5">
-                <div class="col-md-3">&nbsp;</div>
-                <div class="col-md-6">
-
-                    <h1>Hi User, Welcome</h1>
-                    <div class="card">
-                        <div class="card-header">FORM</div>
-                        <div class="card-body">
-                            <form method="post" action="/login">
-                                <div class="mb-3">
-                                    <label>Email Address</label>
-                                    <input type="email" name="user_email_address" class="form-control" />
-                                </div>
-                                <div class="mb-3">
-                                    <label>Name</label>
-                                    <input  name="user_name" class="form-control" />
-                                </div>
-                                
-                                <div class="mb-3">
-                                    <label><Address></Address></label>
-                                    <input  name="user_name" class="form-control" />
-                                </div>
-                                <div class="mb-3">
-                                    <input type="submit" class="btn btn-primary" value="Login" />
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
     </body>
 </html>

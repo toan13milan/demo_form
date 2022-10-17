@@ -11,7 +11,6 @@ var thanksRouter = require('./routes/thanks');
 var usersRouter = require('./routes/users');
 
 var app = express();
-console.log('xxxxxxxxxxx', expressSession);
 app.use(expressSession ({
   secret : 'webslesson',
   resave : true,
